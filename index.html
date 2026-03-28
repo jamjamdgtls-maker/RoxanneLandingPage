@@ -1350,3 +1350,13 @@ body.dark h2 { color: white; }
   function handleSubmit() {
     const fname = document.getElementById('fname').value.trim();
     const contact = document.getElementById('contact-info').value.trim();
+    if (!fname || !contact) {
+      alert('Please fill in at least your first name and a contact method.');
+      return;
+    }
+    document.getElementById('formBody').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('active');
+  }
+</script>
+</body>
+</html>
